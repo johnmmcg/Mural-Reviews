@@ -9,6 +9,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'listen'
 gem 'foundation-rails'
+gem 'dotenv-rails'
+
+group :test do
+  gem 'launchy', require: false
+  gem 'coveralls', require: false
+end
 
 group :development, :test do
   gem 'pry-rails'
