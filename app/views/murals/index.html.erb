@@ -1,0 +1,12 @@
+<h1>Philly Murals</h1>
+
+<ul>
+<% @murals.each do |mural| %>
+  <li>
+    <%= image_tag mural.photo_url %>
+    <%= link_to mural.name, mural_path(mural) %>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to "Add New Mural", new_mural_path %>

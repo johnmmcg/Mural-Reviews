@@ -1,0 +1,23 @@
+<h1>Add a New Mural</h1>
+
+<%= form_for @mural do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br /><br />
+
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+  <br /><br />
+
+  <%= f.label :average_rating %>
+  <%= f.text_field :average_rating %>
+  <br /><br />
+
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_url %>
+  <br /><br />
+
+  <%= f.submit "Add Mural" %>
+
+<% end %>
