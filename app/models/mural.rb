@@ -1,0 +1,3 @@
+class Mural < ApplicationRecord
+
+end
