@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'listen'
 gem 'foundation-rails'
 gem 'dotenv-rails'
+gem 'devise'
 
 group :test do
   gem 'launchy', require: false

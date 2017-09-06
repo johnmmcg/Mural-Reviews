@@ -9,10 +9,18 @@
   </head>
 
   <body>
-
+    <div class="topnav" id="myTopnav">
+      <% if user_signed_in? %>
+        <a href='#'>Sign Out</a>
+      <% else %>
+        <a href='/users/sign_up'>Sign Up</a>
+      <% end %>
+    </div>
     <% flash.each do |key, value| %>
       <%= value %>
-    <% end %>
+    <%end%>
+
+
     <%= yield %>
   </body>
 </html>
