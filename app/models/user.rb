@@ -7,8 +7,3 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 end
-
-
-# Does this not need :Base?
-# Still need to add admin vs member
-# Incorporate factory girl
