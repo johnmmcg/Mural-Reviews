@@ -11,6 +11,7 @@ gem 'listen'
 gem 'foundation-rails'
 gem 'dotenv-rails'
 gem 'devise'
+gem 'faker'
 
 group :test do
   gem 'launchy', require: false
@@ -25,6 +26,7 @@ group :development, :test do
   gem 'factory_girl'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
+  gem 'faker'
 end
 
 group :production do
