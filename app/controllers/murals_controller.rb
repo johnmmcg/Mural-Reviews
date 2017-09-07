@@ -20,6 +20,12 @@ class MuralsController < ApplicationController
 
   def index
     @murals = Mural.all
+
+    if params[:search]
+      @murals = Mural.search(params[:search]).order("created_at DESC")
+    else
+      @users = Mural.all.order('created_at DESC')
+    end
   end
 
   def show
