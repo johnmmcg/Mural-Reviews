@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'rails_helper'
 
 feature 'user signs up;
@@ -24,7 +23,7 @@ feature 'user signs up;
     click_link 'Sign Up'
     click_button 'Sign up'
 
-    expect(page).to have_content("can't be blank")
+    expect(page).to have_content "can't be blank"
     expect(page).to_not have_content("Sign Out")
   end
 
