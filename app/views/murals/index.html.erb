@@ -6,9 +6,13 @@
     <%= image_tag mural.photo_url %>
     <%= link_to mural.name, mural_path(mural) %>
     Number of Reviews: <% %>
-    Average Rating: <% %> 
+    Average Rating: <% %>
+
   </li>
+
 <% end %>
+
+
 </ul>
 
 <%= link_to "Add New Mural", new_mural_path %>

@@ -21,6 +21,13 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @review = Review.find(params[:id])
+    @mural = @review.mural
+    @review.delete
+    redirect_to mural_path(@mural)
+  end
+
   private
   def review_params
     params.require(:review).permit(:rating, :review)

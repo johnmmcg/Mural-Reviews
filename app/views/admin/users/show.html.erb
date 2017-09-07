@@ -1,0 +1,7 @@
+
+
+<%= @user.username %>
+
+
+
+<%= button_to "Delete User", admin_destroy_user_path(@user), method: :delete, data: { confirm: "You sure?" } %>
