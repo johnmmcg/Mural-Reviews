@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
       flash[:notice] = 'Review added successfully'
       redirect_to mural_path(@mural)
     else
-      flash[:notice] = @mural.errors.full_messages.join(', ')
+      flash[:notice] = @review.errors.full_messages.join(', ')
       render :new
     end
   end
