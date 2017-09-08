@@ -1,17 +1,12 @@
-<h1><%= @mural.name %></h1>
-<p>
-  <%= @mural.location %>
-  <%= @mural.average_rating %>
-  <%= image_tag @mural.photo_url %>
-  <%= @mural.description %>
-  Average Rating: <%= @averageRating%>
-</p>
+<div id='app'>
+</div>
+
+<%= link_to "Add Review", new_mural_review_path(@mural)%>
+
 
 <h2> Reviews </h2>
 <% @reviews.each do |review| %>
-  User: <%= review.user.username%>
-  Rating: <%= review.rating %>
-  Review: <%= review.review%>
+User: <%= review.user.username%>
+Rating: <%= review.rating %>
+Review: <%= review.review%>
 <%end%>
-
-<%= link_to "Add Review", new_mural_review_path(@mural)%>
