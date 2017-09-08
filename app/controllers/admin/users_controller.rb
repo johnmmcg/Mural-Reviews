@@ -21,10 +21,26 @@ class Admin::UsersController < ApplicationController
       redirect_to root_path
     else
       flash[:notice] = @user.errors.full_messages.join(', ')
-
     end
-
   end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.murals.destroy_all
+    @user.reviews.destroy_all
+    @user.destroy
+
+    if @user.destroy
+      redirect_to root_url, notice: "User deleted."
+    end
+  end
+
+
 
   private
 
