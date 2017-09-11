@@ -25,7 +25,6 @@ class ReviewContainer extends Component {
         this.setState({ data: body })
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
-
   }
 
   render() {
@@ -42,7 +41,6 @@ class ReviewContainer extends Component {
         )
       })
     }
-
     return(
       <div>
         <h2>Reviews: </h2>

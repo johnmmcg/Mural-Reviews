@@ -36,8 +36,4 @@ describe('ReviewTile', () => {
     expect(wrapper.find('p')).toBePresent()
     expect(wrapper.find('p').text()).toEqual('I love it')
   });
-
-  // it('should render the net vote count', () => {
-  // 
-  // });
 });

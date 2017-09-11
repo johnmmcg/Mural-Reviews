@@ -39,7 +39,6 @@ class MuralIndexContainer extends Component {
         />
       )
     })
-
     return (
       <div>
         {muralsIndex}

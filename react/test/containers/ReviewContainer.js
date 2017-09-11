@@ -4,9 +4,6 @@ import { mount } from 'enzyme';
 import jasmineEnzyme from 'jasmine-enzyme';
 import React from 'react';
 
-
-
-
 describe('ReviewContainer', () => {
   let wrapper;
 
@@ -91,5 +88,4 @@ describe('ReviewContainer', () => {
     expect(wrapper.find('h3').first().text()).toBe('Ben Solo')
     expect(wrapper.find('h4').first().text()).toBe('Rating: 2')
   });
-
 });

@@ -4,9 +4,6 @@ import { mount } from 'enzyme';
 import jasmineEnzyme from 'jasmine-enzyme';
 import React from 'react';
 
-
-
-
 describe('MuralIndexContainer', () => {
   let wrapper;
 
@@ -15,7 +12,6 @@ describe('MuralIndexContainer', () => {
       <MuralIndexContainer/>
     )
   })
-
 
   it('should have the specified initial state', () => {
     expect(wrapper.state()).toEqual({murals: []})
@@ -44,5 +40,4 @@ describe('MuralIndexContainer', () => {
     expect(wrapper.find('h3').first().text()).toBe("R2-Q5")
     expect(wrapper.find)
   })
-
 });

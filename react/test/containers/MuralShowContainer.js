@@ -4,7 +4,6 @@ import { mount } from 'enzyme';
 import jasmineEnzyme from 'jasmine-enzyme';
 import React from 'react';
 
-
 describe('MuralShowContainer', () => {
   let wrapper;
 
@@ -15,7 +14,6 @@ describe('MuralShowContainer', () => {
       />
     )
   })
-
 
   it('should have the specified initial state', () => {
     expect(wrapper.state()).toEqual({ mural: null })
