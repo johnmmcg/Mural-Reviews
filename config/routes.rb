@@ -9,14 +9,20 @@ Rails.application.routes.draw do
   resources :murals, only: [:new, :create, :index, :show, :destroy] do
     resources :reviews, only: [:new, :create, :index]
   end
+
+  namespace :api do
+    namespace :v1 do
+      resources :murals
+      # includes mural information with creator and reviews array
+    end
+  end
+
   resources :reviews, only: [:destroy]
 
   namespace :admin do
     resources :users
-
   end
-  match 'users/:id' => 'admin/users#destroy', :via => :delete, :as => :admin_destroy_user
 
-  # match 'murals/:id' => 'murals#delete', :via => :delete, :as => :destroy_mural
+  match 'users/:id' => 'admin/users#destroy', :via => :delete, :as => :admin_destroy_user
 
 end
