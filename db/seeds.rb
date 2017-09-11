@@ -12,7 +12,7 @@ require 'faker'
 # Mural.destroy_all
 
 
-10.times do
+5.times do
   user_params = {
     username: "#{Faker::StarWars.character}",
     email: "#{Faker::Internet.email}",
@@ -21,7 +21,7 @@ require 'faker'
   User.create(user_params)
 end
 
-10.times do
+5.times do
   mural_params = {
     name: "#{Faker::StarWars.droid}",
     location: "#{Faker::StarWars.planet}",

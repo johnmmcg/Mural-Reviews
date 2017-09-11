@@ -13,6 +13,7 @@ class ReviewsController < ApplicationController
     @review.mural = @mural
     @review.user = current_user
     if @review.save
+      ReviewMailer.new_review(@review).deliver_now
       flash[:notice] = 'Review added successfully'
       redirect_to mural_path(@mural)
     else
