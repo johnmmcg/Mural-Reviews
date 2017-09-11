@@ -3,10 +3,16 @@
 
   <%= link_to "Add New Mural", new_mural_path %>
 
+<ul>
+<% @murals.each do |mural| %>
+  <li>
+    <%= image_tag mural.photo_url %>
+    <%= image_tag mural.mural_upload %>
+    <%= link_to mural.name, mural_path(mural) %>
+    Number of Reviews: <% %>
+    Average Rating: <% %>
   <br />
-
 </div>
 
 <div id="app">
-
 </div>
