@@ -4,6 +4,7 @@
 <% @murals.each do |mural| %>
   <li>
     <%= image_tag mural.photo_url %>
+    <%= image_tag mural.mural_upload %>
     <%= link_to mural.name, mural_path(mural) %>
     Number of Reviews: <% %>
     Average Rating: <% %>

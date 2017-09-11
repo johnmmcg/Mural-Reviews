@@ -12,6 +12,7 @@ gem 'foundation-rails'
 gem 'dotenv-rails'
 gem 'devise'
 gem 'faker'
+gem "carrierwave"
 
 group :test do
   gem 'launchy', require: false
