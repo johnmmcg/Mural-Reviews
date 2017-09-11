@@ -47,6 +47,6 @@ class MuralsController < ApplicationController
   private
 
   def mural_params
-    params.require(:mural).permit(:name, :location, :description, :rating, :photo_url)
+    params.require(:mural).permit(:name, :location, :description, :rating, :photo_url, :mural_upload)
   end
 end
