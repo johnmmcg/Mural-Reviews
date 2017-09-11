@@ -8,7 +8,7 @@ class ReviewTile extends Component {
       username: ""
     }
   }
-
+  
   render() {
     return(
       <div className="reviewTile">

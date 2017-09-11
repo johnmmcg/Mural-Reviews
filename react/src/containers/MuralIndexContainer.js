@@ -39,7 +39,6 @@ class MuralIndexContainer extends Component {
         />
       )
     })
-
     return (
       <div className="small-4 medium-8 columns muralIndex">
         {muralsIndex}
