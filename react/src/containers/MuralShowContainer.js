@@ -46,7 +46,7 @@ class MuralShowContainer extends Component {
         />
     }
     return (
-      <div>
+      <div className="muralShow">
         {muralShow}
         <ReviewContainer id={this.props.params.id} />
       </div>

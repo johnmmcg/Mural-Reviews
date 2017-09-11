@@ -41,7 +41,7 @@ class MuralIndexContainer extends Component {
     })
 
     return (
-      <div>
+      <div className="small-4 medium-8 columns muralIndex">
         {muralsIndex}
       </div>
     )
