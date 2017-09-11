@@ -1,5 +1,6 @@
 <h1>Add a New Mural</h1>
 
+
 <%= form_for @mural do |f| %>
 
   <%= f.label :name %>
@@ -21,6 +22,9 @@
   <%= f.label :photo_url %>
   <%= f.text_field :photo_url %>
   <br /><br />
+
+  <%= f.label :mural_upload, "Upload Mural Picture" %>
+  <%= f.file_field :mural_upload %>
 
   <%= f.submit "Add Mural" %>
 

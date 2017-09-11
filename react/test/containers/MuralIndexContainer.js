@@ -42,6 +42,7 @@ describe('MuralIndexContainer', () => {
     })
     expect(wrapper.find(MuralIndexTile)).toBePresent();
     expect(wrapper.find('h3').first().text()).toBe("R2-Q5")
+    expect(wrapper.find)
   })
 
 });
