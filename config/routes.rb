@@ -6,13 +6,23 @@ Rails.application.routes.draw do
   }
   root 'murals#index'
   # this will need to be changed back to 'static_pages#index' when we add react
-  resources :murals, only: [:new, :create, :index, :show] do
+  resources :murals, only: [:new, :create, :index, :show, :destroy] do
     resources :reviews, only: [:new, :create, :index]
   end
 
   namespace :api do
     namespace :v1 do
       resources :murals
+      # includes mural information with creator and reviews array
     end
   end
+
+  resources :reviews, only: [:destroy]
+
+  namespace :admin do
+    resources :users
+  end
+
+  match 'users/:id' => 'admin/users#destroy', :via => :delete, :as => :admin_destroy_user
+
 end

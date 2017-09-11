@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import MuralShowTile from '../components/MuralShowTile'
+import ReviewContainer from './ReviewContainer'
+
 
 class MuralShowContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       mural: null
-      // id: this.props.params.id
     }
   }
 
@@ -43,10 +44,11 @@ class MuralShowContainer extends Component {
           photo_url= {this.state.mural.mural.photo_url}
           creator= {this.state.mural.user.username}
         />
-      }
+    }
     return (
       <div>
         {muralShow}
+        <ReviewContainer id={this.props.params.id} />
       </div>
     )
   }

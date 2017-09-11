@@ -2,11 +2,3 @@
 </div>
 
 <%= link_to "Add Review", new_mural_review_path(@mural)%>
-
-
-<h2> Reviews </h2>
-<% @reviews.each do |review| %>
-User: <%= review.user.username%>
-Rating: <%= review.rating %>
-Review: <%= review.review%>
-<%end%>

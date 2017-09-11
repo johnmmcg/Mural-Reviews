@@ -30,7 +30,7 @@ class MuralIndexContainer extends Component {
   render() {
     let muralsIndex
     muralsIndex = this.state.murals.map(mural => {
-      return(
+      return (
         <MuralIndexTile
           key={mural.id}
           id={mural.id}

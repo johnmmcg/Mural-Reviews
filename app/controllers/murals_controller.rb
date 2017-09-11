@@ -38,6 +38,12 @@ class MuralsController < ApplicationController
     @averageRating = ratingTotal/(@reviews.length + 1)
   end
 
+  def destroy
+    @mural = Mural.find(params[:id])
+    @mural.delete
+    redirect_to root_path
+  end
+
   private
 
   def mural_params

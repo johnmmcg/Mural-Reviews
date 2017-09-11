@@ -11,12 +11,12 @@ class MuralIndexTile extends Component {
 
   render() {
     return(
-      <div className="MuralIndexTile">
+      <div className="MuralShowTile">
           <h1>{this.props.name}</h1>
           <h4>{this.props.location}</h4>
           <img src={this.props.photo_url} />
           <h3>Posted by {this.props.creator}</h3>
-          <h3>{this.props.description}</h3>
+          <p>{this.props.description}</p>
       </div>
     )
   }

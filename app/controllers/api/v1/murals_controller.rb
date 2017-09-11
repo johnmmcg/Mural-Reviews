@@ -7,9 +7,18 @@ class Api::V1::MuralsController < ApiController
   def show
     mural = Mural.find(params[:id])
     user = mural.user
+    reviews = mural.reviews.map do |review|
+      {
+        body: review.review,
+        rating: review.rating,
+        user: User.find(review.user_id)
+      }
+    end
+
     data = {
       mural: mural,
-      user: user
+      user: user,
+      reviews: reviews
     }
     render json: data
   end

@@ -21,8 +21,8 @@ describe('MuralIndexContainer', () => {
     expect(wrapper.state()).toEqual({murals: []})
   });
 
-  xit('should render a MuralIndexTile component', () =>{
-    expect(wrapper.find(MuralIndexTile)).toBePresent();
+  it('should not render a MuralIndexTile component if not data given', () =>{
+    expect(wrapper.find(MuralIndexTile)).not.toBePresent();
   })
 
   it('should render the MuralIndexTile component with specified props after setting the state', () => {
