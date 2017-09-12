@@ -42,7 +42,7 @@ class ReviewContainer extends Component {
       })
     }
     return(
-      <div>
+      <div className="reviewContainer">
         <h2>Reviews: </h2>
         {reviewsIndex}
       </div>
