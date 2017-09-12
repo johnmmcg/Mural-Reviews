@@ -11,6 +11,7 @@ feature "profile photo" do
     attach_file :user_profile_photo, File.join(Rails.root, 'spec', 'support', 'images', 'cat-bonnet_small.jpg')
     click_button "Sign up"
     expect(page).to have_css("img[src*='cat-bonnet_small.jpg']")
+
   end
 
   scenario "user changes their profile photo" do
