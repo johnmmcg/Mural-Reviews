@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :reviews, only: [:destroy]
+  resources :reviews, only: [:new, :create, :destroy]
 
   namespace :admin do
     resources :users

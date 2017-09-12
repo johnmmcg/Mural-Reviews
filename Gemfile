@@ -29,7 +29,7 @@ group :development, :test do
   gem 'factory_girl'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
-  # gem 'faker'
+  gem 'faker'
 end
 
 group :production do
