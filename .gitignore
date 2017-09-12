@@ -21,3 +21,6 @@
 /react/coverage
 /coverage
 .env
+
+# Ignore uploaded files in test/development
+/public/uploads
