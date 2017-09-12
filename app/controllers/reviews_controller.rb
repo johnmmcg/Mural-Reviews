@@ -26,6 +26,7 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     @mural = @review.mural
     @review.delete
+    flash[:notice] = 'Review successfully deleted.'
     redirect_to mural_path(@mural)
   end
 

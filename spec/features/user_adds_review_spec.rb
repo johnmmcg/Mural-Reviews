@@ -52,4 +52,24 @@ feature 'user add review;
 
     expect(page).to have_content("can't be blank")
   end
+
+  scenario 'user adds a review while signed in' do
+    user = User.create(username: 'johnmcg', email: 'johnmcg@gmail.com', password: 'password')
+    big_fish = Mural.create(name: 'Big Fish', location: 'Martin Luther King Dr', user_id: user.id, description: "This is a description", rating: '4', photo_url: 'http://www.petsmart.com/learning-center/fish-care/the-right-food-to-feed-your-fish/A0009.html')
+    visit new_user_session_path
+
+    fill_in 'Email', with: "johnmcg@gmail.com"
+    fill_in 'Password', with: "password"
+    click_button 'Log in'
+
+    click_link 'Big Fish'
+    click_link 'Add Review'
+    fill_in 'Review', with: "Here is my review"
+    fill_in 'Rating', with: "4"
+    click_button 'Add Review'
+
+    click_button "Delete Review"
+    
+    expect(page).to have_content "Review successfully deleted."
+  end
 end
