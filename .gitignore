@@ -21,6 +21,7 @@
 /react/coverage
 /coverage
 .env
+cat-bonnet_small.jpg
 
 # Ignore uploaded files in test/development
 /public/uploads
