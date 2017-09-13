@@ -10,20 +10,6 @@ class Admin::UsersController < ApplicationController
     end
   end
 
-  def new
-    @user = User.new
-  end
-
-  def create
-    @user = User.save(user_params)
-    if @user.save
-      flash[:notice] = 'User added successfully'
-      redirect_to root_path
-    else
-      flash[:notice] = @user.errors.full_messages.join(', ')
-    end
-  end
-
   def show
     @user = User.find(params[:id])
   end
