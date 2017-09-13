@@ -16,7 +16,7 @@ feature "search bar" do
 
     visit root_path
 
-    fill_in 'Search Murals', with: 'example mural'
+    fill_in 'Look up a mural...', with: 'example mural'
 
     click_button 'Search'
 
