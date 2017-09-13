@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :reviews, only: [:new, :create, :destroy]
 
   namespace :admin do
-    resources :users
+    resources :users, only: [:destroy, :index, :show]
   end
 
   match 'users/:id' => 'admin/users#destroy', :via => :delete, :as => :admin_destroy_user
