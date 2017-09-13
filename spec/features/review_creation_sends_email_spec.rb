@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature "Review email notice" do
+xfeature "Review email notice" do
   scenario "user recieves an email stating their posted mural was given a review" do
     # Clear out any previously delivered emails
     ActionMailer::Base.deliveries.clear

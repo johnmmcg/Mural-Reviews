@@ -41,6 +41,7 @@ class MuralsController < ApplicationController
   def destroy
     @mural = Mural.find(params[:id])
     @mural.delete
+    flash[:notice] = 'Mural successfully deleted.'
     redirect_to root_path
   end
 
