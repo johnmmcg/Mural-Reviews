@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mural Reviews</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Fugaz+One|Monoton|Quicksand" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="topnav" id="myTopnav">
+      <div class="row medium-unstack">
+        <div class="small-12 medium-6 columns menu">
+          <% if user_signed_in? %>
+          <%= image_tag current_user.profile_photo %>
+          <%= link_to 'Home', root_path %>
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+          <%= link_to 'Edit Profile', edit_user_registration_path %>
+          <% if current_user.admin? %>
+          <%= link_to 'Users Index', admin_users_path %>
+          <% end %>
+
+          <% else %>
+          <%= link_to 'Home', root_path %>
+          <%= link_to 'Sign Up', new_user_registration_path %>
+          <%= link_to 'Sign In', new_user_session_path %>
+          <% end %>
+        </div>
+
+        <div class="small-12 medium-6 columns search">
+          <div class="row align-right">
+            <%= form_tag(murals_path, method: "get", id: "search-form") do %>
+            <div class="small-4 medium-4 columns searchbutton">
+              <%= submit_tag "Search", class: 'hollow button'%>
+            </div>
+            <div class="small-8 medium-8 columns searchbar">
+              <%= text_field_tag :search, params[:search], placeholder: "Search Murals" %>
+            </div>
+          </div>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <div class="mainheader">
+    <div class="row">
+      <div class="small-12 columns">
+        <h1>Mural Reviews</h1>
+      </div>
+    </div>
+  </div>
+
+    <% flash.each do |key, value| %>
+      <%= value %>
+    <%end%>
+
+
+    <%= yield %>
+
+  </body>
+</html>
