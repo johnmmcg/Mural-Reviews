@@ -1,1 +1,126 @@
-// @import "*";
+@import "foundation";
+
+$scheme-red: #8e3b46;
+$scheme-cream: #f6f5e0;
+$scheme-white: #ffffff;
+$scheme-light-blue: #798ce0;
+$scheme-dark-blue: #333787;
+
+
+$fugaz: 'Fugaz One', cursive;
+$quicksand: 'Quicksand', sans-serif;
+$bungie: 'Bungee Shade', cursive;
+$monoton: 'Monoton', cursive;
+
+.mainheader {
+  margin: 0;
+  padding: 0;
+  background: url('skyline.jpg') no-repeat center;
+  background-size: cover;
+  border-bottom-style: solid;
+  border-bottom-size: 15px;
+  border-color: $scheme-red;
+
+
+  h1 {
+    text-align: center;
+    font-family: $monoton;
+    font-size: 75px;
+    background-color: $scheme-red;
+    color: $scheme-cream;
+    margin: auto;
+    margin-top: 300px;
+    padding: 5px 5px;
+    width: auto;
+  }
+}
+
+.topnav {
+  background-color: $scheme-dark-blue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  .menu {
+    width: 400px;
+    margin-top: 25px;
+    padding: 5px;
+    align-items: center;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border-style: solid;
+      border-color: $scheme-red;
+      border-width: thin;
+      margin: 0 5px;
+    }
+
+    a {
+      font-size: 18px;
+      text-align: center;
+      padding: 10px 7px;
+      font-family: $fugaz;
+      color: $scheme-cream;
+      margin: 50px 10px;
+      border-radius: 10%;
+      transition: all 0.2s ease 0s;
+
+      &:hover {
+        background-color: $scheme-cream;
+        color: $scheme-dark-blue
+      }
+    }
+
+  }
+
+  .search {
+    align-items: right;
+    padding: 5px;
+
+    .searchbar {
+      margin: 20px 0;
+      border-radius: 10%;
+      input {
+        background: linear-gradient(90deg, $scheme-white, $scheme-cream);
+      }
+      input[type=text] {
+        width: 130px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+      }
+      /* When the input field gets focus, change its width to 100% */
+      input[type=text]:focus {
+          width: 100%;
+      }
+
+    }
+
+    .searchbutton {
+      padding: auto;
+    }
+
+    .hollow {
+      font-family: $quicksand;
+      margin-top: 12px;
+      color: $scheme-cream;
+      background-color: $scheme-red;
+      border-style: solid;
+      border-width: thin;
+      border-color: $scheme-cream;
+
+      &:hover {
+        color: $scheme-red;
+        background-color: $scheme-cream;
+        border-style: solid;
+        border-width: thin;
+        border-color: $scheme-red;
+      }
+    }
+
+  }
+
+
+}
