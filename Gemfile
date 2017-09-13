@@ -13,7 +13,6 @@ gem 'dotenv-rails'
 gem 'devise'
 gem 'faker'
 gem "carrierwave"
-gem "mailcatcher"
 gem "sendgrid-ruby"
 
 group :test do
