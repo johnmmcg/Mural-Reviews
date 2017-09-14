@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReviewTile from '../components/ReviewTile'
 import { Link } from 'react-router'
+import ReviewFormContainer from './ReviewFormContainer'
 
 class ReviewContainer extends Component {
   constructor(props) {
@@ -31,17 +32,6 @@ class ReviewContainer extends Component {
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
-  // addNewReview(ReviewPayLoad){
-  //   fetch(`/api/v1/murals/${this.props.id}/reviews`, {
-  //     credentials: 'same-origin',
-  //     method: 'POST',
-  //     body: JSON.stringify(ReviewPayLoad)
-  //   })
-  //   .then(response => response.json())
-  //   .then(body => {
-  //     this.setState( {data: body} )
-  //   })
-  // }
 
   addNewVote(VotePayload){
     fetch(`/api/v1/murals/${this.props.id}/votes`, {
@@ -76,6 +66,10 @@ class ReviewContainer extends Component {
     })
   }
 
+  refreshPage() {
+    window.location.reload()
+  }
+
 
   render() {
     let reviewsIndex
@@ -107,11 +101,8 @@ class ReviewContainer extends Component {
       <div>
         <h2>Reviews: </h2>
         {reviewsIndex}
-        <div className="AddNewReview">
-          <Link to={`/murals/${this.props.id}/reviews/new`}>
-            <h3>Add New Review</h3>
-          </Link>
-        </div>
+
+        <Link to={`/murals/${this.props.id}/reviews/new`} onClick={this.refreshPage}>Add New Review</Link>
       </div>
     )
   }
