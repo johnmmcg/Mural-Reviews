@@ -14,6 +14,7 @@ gem 'devise'
 gem 'faker'
 gem "carrierwave"
 gem "sendgrid-ruby"
+gem 'puma'
 
 group :test do
   gem 'launchy', require: false
@@ -33,5 +34,4 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'puma'
 end

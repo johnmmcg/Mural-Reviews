@@ -21,3 +21,4 @@
 /react/coverage
 /coverage
 .env
+*.sqlite3
