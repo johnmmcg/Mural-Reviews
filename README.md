@@ -3,3 +3,6 @@
 ![Coverage Status](https://coveralls.io/repos/johnmmcg/Mural-Reviews/badge.png)
 
 ##Mural Reviews!
+
+
+<!-- This is a test message -->
