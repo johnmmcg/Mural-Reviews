@@ -75,7 +75,7 @@ feature 'user adds mural;
 
     click_button "Add Mural"
 
-    expect(page).to have_content "can't be blank"
+    expect(page).to have_content "Please specify a photo url or upload a mural picture, but not both."
   end
 
   scenario 'user can delete the mural she posted' do
