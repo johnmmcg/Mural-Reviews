@@ -59,7 +59,7 @@ feature 'user adds mural;
 
   scenario 'user attempts to add a mural while signed in, but provides bad data' do
     user = User.create(username: 'johnmcg', email: 'johnmcg@gmail.com', password: 'password')
-    big_fish = Mural.create(name: 'Big Fish', location: 'Martin Luther King Dr', user_id: user.id, description: "This is a description", rating: '4', photo_url: 'http://www.petsmart.com/learning-center/fish-care/the-right-food-to-feed-your-fish/A0009.html')
+    Mural.create(name: 'Big Fish', location: 'Martin Luther King Dr', user_id: user.id, description: "This is a description", rating: '4', photo_url: 'http://www.petsmart.com/learning-center/fish-care/the-right-food-to-feed-your-fish/A0009.html')
     visit new_user_session_path
 
     fill_in 'Email', with: "johnmcg@gmail.com"

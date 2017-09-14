@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'non-admin cannot access user index' do
 
   before(:each) do
-    user = User.create(username: "notanadmin", password: "password1234", email: "notanadmin@gmail.com")
+    User.create(username: "notanadmin", password: "password1234", email: "notanadmin@gmail.com")
 
     visit new_user_session_path
 
