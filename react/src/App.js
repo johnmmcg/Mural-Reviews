@@ -10,7 +10,9 @@ const App = (props) => {
     <Router history={browserHistory}>
       <Route path='/' component={NavBar}>
         <IndexRoute component={MuralIndexContainer} />
-        <Route path='/murals/:id' component={MuralShowContainer}/>
+        <Route path='/murals/:id' component={MuralShowContainer}>
+          <Route path='/murals/:id/reviews/new'/>
+        </Route>
       </Route>
     </Router>
   )
