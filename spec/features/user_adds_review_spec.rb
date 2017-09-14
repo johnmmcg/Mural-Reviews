@@ -12,7 +12,7 @@
 #
 #     visit '/mural/#{big_fish.id}'
 #     save_and_open_page
-#     # binding.pry
+#    
 #
 #     click_link 'Add Review'
 #
