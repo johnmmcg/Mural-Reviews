@@ -5,8 +5,14 @@ class MuralIndexContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      murals: []
+      murals: [],
+      search: ''
     }
+    this.updateSearch=this.updateSearch.bind(this)
+  }
+
+  updateSearch(event) {
+    this.setState({search: event.target.value.substr(0, 20)});
   }
 
   componentDidMount() {
@@ -29,7 +35,16 @@ class MuralIndexContainer extends Component {
 
   render() {
     let muralsIndex
-    muralsIndex = this.state.murals.map(mural => {
+    let filteredMurals = this.state.murals.filter(
+      (mural) => {
+        return mural.name.toLowerCase().indexOf(
+          this.state.search.toLowerCase()) !== -1;
+      }
+    )
+
+
+
+    muralsIndex = filteredMurals.map(mural => {
       return (
         <MuralIndexTile
           key={mural.id}
@@ -40,7 +55,17 @@ class MuralIndexContainer extends Component {
       )
     })
     return (
+
       <div>
+        <form className="search">
+          <input className="search"
+            type="text"
+            name="Search"
+            placeholder="Search"
+            value={this.state.search}
+            onChange={this.updateSearch}
+          />
+          </form>
         {muralsIndex}
       </div>
     )

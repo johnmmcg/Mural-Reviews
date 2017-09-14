@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReviewTile from '../components/ReviewTile'
 import { Link } from 'react-router'
-import ReviewFormContainer from './ReviewFormContainer'
+
 
 class ReviewContainer extends Component {
   constructor(props) {
@@ -62,8 +62,9 @@ class ReviewContainer extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      this.setState( {data: body} )
+      console.log(body)
     })
+
   }
 
   refreshPage() {
