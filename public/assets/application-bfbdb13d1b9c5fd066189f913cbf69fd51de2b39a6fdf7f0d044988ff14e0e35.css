@@ -1,0 +1,134 @@
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.4.1
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+/* line 14, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.topnav {
+  background-color: #333787;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+/* line 21, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.topnav .menu {
+  margin-top: 20px;
+  padding: 5px;
+  align-items: center;
+}
+/* line 26, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.topnav .menu img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #8e3b46;
+  border-width: thin;
+  margin: auto;
+}
+/* line 36, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.topnav .menu a {
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 7px;
+  font-family: "Fugaz One", cursive;
+  color: #f6f5e0;
+  margin: 50px 10px;
+  border-radius: 10%;
+  transition: all 0.2s ease 0s;
+}
+/* line 46, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.topnav .menu a:hover {
+  background-color: #f6f5e0;
+  color: #333787;
+}
+/* line 53, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.topnav .search {
+  align-items: right;
+  padding: 0;
+  margin-top: 20px;
+}
+/* line 58, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.topnav .search .searchbutton {
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+/* line 64, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.topnav .search .searchbar {
+  text-align: right;
+  margin: 20px 0;
+  border-radius: 10%;
+  /* When the input field gets focus, change its width to 100% */
+}
+/* line 68, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.topnav .search .searchbar input {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #8e3b46;
+  background: linear-gradient(90deg, #ffffff, #f6f5e0);
+}
+/* line 74, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.topnav .search .searchbar input[type=text] {
+  margin: 0px;
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+/* line 81, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.topnav .search .searchbar input[type=text]:focus {
+  width: 100%;
+}
+/* line 86, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.topnav .search .hollow {
+  font-family: "Quicksand", sans-serif;
+  margin-top: 12px;
+  color: #f6f5e0;
+  background-color: #8e3b46;
+  border-style: solid;
+  border-width: thin;
+  border-color: #f6f5e0;
+}
+/* line 95, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.topnav .search .hollow:hover {
+  color: #8e3b46;
+  background-color: #f6f5e0;
+  border-style: solid;
+  border-width: thin;
+  border-color: #8e3b46;
+}
+
+/* line 106, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.mainheader {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: url(/assets/skyline-4d7b4be7790be633a6061d52d8ad273088c9b887cba0d258ca4f68b1f4a637b2.jpg) no-repeat center;
+  border-bottom-style: solid;
+  border-size: 15px;
+  border-color: #8e3b46;
+  background-size: cover;
+}
+/* line 116, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.mainheader h1 {
+  text-align: center;
+  font-family: "Monoton", cursive;
+  font-size: 75px;
+  background-color: #8e3b46;
+  color: #f6f5e0;
+  margin: auto;
+  margin-top: 300px;
+  padding: 5px 5px;
+  width: auto;
+  border-color: #f6f5e0;
+  border-width: 10px;
+  border-style: double;
+  border-bottom-color: #8e3b46;
+}
+
+/* line 133, /Users/johnmcg/challenges/tagreviews/Mural-Reviews/app/assets/stylesheets/application.scss */
+.blue {
+  color: #798ce0;
+}
