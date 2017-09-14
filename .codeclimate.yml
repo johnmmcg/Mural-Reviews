@@ -1,4 +1,2 @@
-Ruby: true
-
 exclude_paths:
-- public/assets
+- "public/assets/"
