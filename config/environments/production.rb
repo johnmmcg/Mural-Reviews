@@ -13,8 +13,11 @@ Rails.application.configure do
   }
 
   # Code is not reloaded between requests.
-  config.cache_classes = true
 
+  config.cache_classes = true
+  config.serve_static_assets = true
+  config.assets.compile = true
+  config.assets.digest = true
 
   config.secret_key_base = ENV["SECRET_KEY_BASE"]
   # Eager load code on boot. This eager loads most of Rails and
@@ -34,9 +37,6 @@ Rails.application.configure do
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
-
-  config.assets.compile = true
-  config.assets.digest = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
