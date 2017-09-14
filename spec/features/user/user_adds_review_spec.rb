@@ -19,7 +19,7 @@ feature 'user add review;
 
 
   scenario 'user adds a review while signed in' do
-    User.create(username: 'johnmcg', email: 'johnmcg@gmail.com', password: 'password')
+    user = User.create(username: 'johnmcg', email: 'johnmcg@gmail.com', password: 'password')
     Mural.create(name: 'Big Fish', location: 'Martin Luther King Dr', user_id: user.id, description: "This is a description", rating: '4', photo_url: 'http://www.petsmart.com/learning-center/fish-care/the-right-food-to-feed-your-fish/A0009.html')
     visit new_user_session_path
 

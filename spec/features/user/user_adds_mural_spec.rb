@@ -15,7 +15,7 @@ feature 'user adds mural;
 
 
   scenario 'user adds a mural with a photo url while signed in' do
-    user = User.create(username: 'johnmcg', email: 'johnmcg@gmail.com', password: 'password')
+    User.create(username: 'johnmcg', email: 'johnmcg@gmail.com', password: 'password')
     visit new_user_session_path
 
     fill_in 'Email', with: "johnmcg@gmail.com"
@@ -36,7 +36,7 @@ feature 'user adds mural;
   end
 
   scenario 'user adds a mural with a photo attachment while signed in' do
-    user = User.create(username: 'johnmcg', email: 'johnmcg@gmail.com', password: 'password')
+    User.create(username: 'johnmcg', email: 'johnmcg@gmail.com', password: 'password')
     visit new_user_session_path
 
     fill_in 'Email', with: "johnmcg@gmail.com"
