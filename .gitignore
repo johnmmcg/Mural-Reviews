@@ -23,3 +23,4 @@
 .env
 tmp
 *.sqlite3
+/public/uploads
