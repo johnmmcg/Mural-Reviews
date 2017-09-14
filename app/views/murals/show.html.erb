@@ -1,19 +1,7 @@
-<h1><%= @mural.name %></h1>
-<p>
-  <%= @mural.location %>
-  <%= @mural.average_rating %>
-  <%= image_tag @mural.photo_url %>
-  <%= image_tag @mural.mural_upload %>
-  <%= @mural.description %>
-  Average Rating: <%= @averageRating%>
-
-</p>
 
 <h2> Reviews </h2>
 <% @reviews.each do |review| %>
-  User: <%= review.user.username%>
-  Rating: <%= review.rating %>
-  Review: <%= review.review%>
+
   <% if current_user && current_user.admin? %>
     <%= button_to 'Delete Review', review_path(review), method: :delete %>
   <% end %>

@@ -10,6 +10,7 @@ describe('ReviewTile', () => {
       description,
       rating,
       photo_url,
+      // onClickSpy
       wrapper;
 
   beforeEach(() => {
@@ -18,6 +19,13 @@ describe('ReviewTile', () => {
         username="exampleUser"
         rating="4"
         review="I love it"
+        currentUser= "1"
+        votes={[
+          {id: 1, direction: 1, user_id: 1},
+          {id: 2, direction: -1, user_id: 2}
+        ]}
+        // addNewVote={onClickSpy}
+        // deleteVote={onClickSpy}
       />
     );
   });
@@ -34,6 +42,17 @@ describe('ReviewTile', () => {
 
   it('should render the review', () => {
     expect(wrapper.find('p')).toBePresent()
-    expect(wrapper.find('p').text()).toEqual('I love it')
+    expect(wrapper.find('p').text()).toEqual("I love it")
   });
+
+  // it('should render the upvote count', () => {
+  //   expect(wrapper.find('h6')).toBePresent()
+  //   expect(wrapper.find('h6').text()).toEqual('Upvotes')
+  // });
+  //
+  // it('should render the downvote count', () => {
+  //   expect(wrapper.find('h6')).toBePresent()
+  //   expect(wrapper.find('h6').text()).toEqual('Downvotes')
+  // });
+
 });

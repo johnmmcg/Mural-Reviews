@@ -9,7 +9,6 @@ RSpec.describe Mural, type: :model do
     it { should_not have_valid(:location).when(nil, "")}
 
     it {should have_valid(:photo_url).when("url")}
-    it {should_not have_valid(:photo_url).when(nil, "")}
 
     it {should have_valid(:description).when("this is a description")}
     it {should_not have_valid(:description).when(nil, "")}

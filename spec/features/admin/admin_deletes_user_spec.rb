@@ -33,9 +33,12 @@ feature 'admin deletes a user' do
 
 
   scenario 'delete a mural' do
-    visit root_path
-    click_link 'Big Fish'
+
+    visit `/mural/#{Mural.find_by(name: 'Big Fish')}`
+
+
     click_button 'Delete Mural'
+
 
     expect(page).to_not have_content "Big Fish"
   end
@@ -49,6 +52,12 @@ feature 'admin deletes a user' do
   end
 
 end
+
+
+
+
+
+
 # require 'rails_helper'
 #
 # feature 'admin deletes a user, mural and review' do

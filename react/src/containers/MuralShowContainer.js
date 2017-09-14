@@ -12,7 +12,8 @@ class MuralShowContainer extends Component {
   }
 
   componentDidMount() {
-    fetch(`/api/v1/murals/${this.props.params.id}`)
+    fetch(`/api/v1/murals/${this.props.params.id}`, {
+      credentials: 'same-origin'})
       .then(response => {
         if (response.ok) {
           return response;
@@ -23,12 +24,10 @@ class MuralShowContainer extends Component {
           }
         })
       .then(response => response.json())
-      .then( body => {
+      .then(body => {
         this.setState({ mural: body })
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
-
-
   }
 
   render() {
