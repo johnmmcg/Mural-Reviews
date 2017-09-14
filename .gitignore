@@ -21,6 +21,6 @@
 /react/coverage
 /coverage
 .env
-/public/uploads
 tmp
 *.sqlite3
+/public/uploads

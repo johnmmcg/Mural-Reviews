@@ -12,7 +12,7 @@ feature "search bar" do
   end
 
   scenario "User searches for mural" do
-    mural_example = Mural.create(name: "example mural", description: "description of example mural", rating: "1", location: "1234 Street Road", photo_url: "wwww.image.com/example", user_id: @user1.id )
+    Mural.create(name: "example mural", description: "description of example mural", rating: "1", location: "1234 Street Road", photo_url: "wwww.image.com/example", user_id: @user1.id )
 
     visit root_path
 

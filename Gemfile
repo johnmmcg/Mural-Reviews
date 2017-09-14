@@ -15,6 +15,7 @@ gem 'faker'
 gem "carrierwave"
 gem "sendgrid-ruby"
 gem 'puma'
+gem 'codeclimate-yaml', '~> 0.12.0'
 
 group :test do
   gem 'launchy', require: false
