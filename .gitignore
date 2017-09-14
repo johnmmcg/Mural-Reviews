@@ -22,3 +22,5 @@
 /coverage
 .env
 /public/uploads
+tmp
+*.sqlite3
