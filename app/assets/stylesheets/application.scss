@@ -33,7 +33,7 @@ $raleway: 'Raleway', sans-serif;
       height: 75px;
       border-radius: 50%;
       border-style: solid;
-      border-color: $scheme-red;
+      border-color: $scheme-cream;
       border-width: thin;
       margin: auto;
       overflow: hidden;
@@ -121,9 +121,7 @@ $raleway: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
   background: image-url("skyline.jpg") no-repeat center;
-  border-bottom-style: solid;
-  border-size: 15px;
-  border-color: $scheme-red;
+  border-bottom-style: 10px solid $scheme-cream;
   background-size: cover;
 
   h1 {
@@ -149,7 +147,10 @@ $raleway: 'Raleway', sans-serif;
 
 .index {
   text-align: center;
-  margin: 15px auto;
+  margin: 0 auto;
+  padding: 15px;
+  padding-top: 25px;
+  background-color: $scheme-red;
 
   .indexLink {
     a {
@@ -162,7 +163,7 @@ $raleway: 'Raleway', sans-serif;
       background-color: $scheme-dark-blue;
       border-style: solid;
       border-width: thin;
-      border-color: $scheme-red;
+      border-color: $scheme-cream;
       transition: all 0.2s ease 0s;
 
       &:hover {
@@ -182,7 +183,7 @@ $raleway: 'Raleway', sans-serif;
       font-family: $quicksand;
       border-style: solid;
       border-width: 2px;
-      border-color: $scheme-red;
+      border-color: $scheme-dark-blue;
       background: linear-gradient(90deg, $scheme-white, $scheme-cream);
 
     }
@@ -251,10 +252,13 @@ $raleway: 'Raleway', sans-serif;
 
 .MuralShowTile {
   margin: 0 auto;
+  background-color: $scheme-red;
 
   .tile{
+    border: 5px solid $scheme-dark-blue;
+    background-color: $scheme-cream;
     text-align: center;
-    margin-top: 40px;
+    margin: 40px auto;
 
     img {
       margin-bottom: 10px;
@@ -309,4 +313,81 @@ $raleway: 'Raleway', sans-serif;
   background-color: $scheme-red;
   color: $scheme-cream;
   width: 100%;
+}
+
+.reviewTile {
+  border: 3px solid $scheme-red;
+  margin: 20px;
+  padding: 15px;
+  background-color: $scheme-cream;
+
+  h4 {
+    font-family: $quicksand;
+    font-weight: bold;
+    font-size: 28px;
+    margin: 0 auto;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 0px;
+  }
+
+  h3 {
+    margin: 0 auto;
+    margin-left: 10px;
+    font-family: $fugaz;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0px;
+    text-align: left;
+  }
+
+  p {
+    margin-top: 12px;
+    font-family: $raleway;
+    font-size: 24px;
+    text-align: left;
+    text-indent: 25px;
+  }
+
+  h2 {
+    font-family: $fugaz;
+    font-size: 18px;
+    text-align: right;
+  }
+}
+
+.newMuralLink {
+  a {
+    color: $scheme-cream;
+
+    &:hover {
+      color: $scheme-dark-blue;
+    }
+  }
+
+  color: $scheme-cream;
+  margin: 25px auto;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 5px;
+  font-size: 30px;
+  font-family: $quicksand;
+  background-color: $scheme-red;
+  border-style: solid;
+  border-width: thin;
+  border-color: $scheme-cream;
+  transition: all 0.2s ease 0s;
+
+  &:hover {
+    color: $scheme-dark-blue;
+    background-color: $scheme-cream;
+    border-style: solid;
+    border-width: thin;
+    border-color: $scheme-dark-blue;
+  }
+
+}
+
+.reviews {
+  background-color: $scheme-light-blue;
 }

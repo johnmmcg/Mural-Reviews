@@ -64,7 +64,7 @@ class ReviewContainer extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      console.log(body)
+      this.setState( {data: body} )
     })
 
   }
@@ -102,10 +102,19 @@ class ReviewContainer extends Component {
     }
     return(
       <div>
-        <h2>Reviews: </h2>
+        <div className="row align-center">
+          <div className="small-4 small-centered large-centered newMuralLink">
+            <Link to={`/murals/${this.props.id}/reviews/new`} onClick={this.refreshPage} >Add New Review</Link>
+          </div>
+        </div>
+
         {reviewsIndex}
 
-        <Link to={`/murals/${this.props.id}/reviews/new`} onClick={this.refreshPage}>Add New Review</Link>
+        <div className="row align-center">
+          <div className="small-4 small-centered large-centered newMuralLink">
+            <Link to={`/murals/${this.props.id}/reviews/new`} onClick={this.refreshPage} >Add New Review</Link>
+          </div>
+        </div>
       </div>
     )
   }
