@@ -300,3 +300,13 @@ $raleway: 'Raleway', sans-serif;
     }
   }
 }
+
+.flash {
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: $raleway;
+  background-color: $scheme-red;
+  color: $scheme-cream;
+  width: 100%;
+}
