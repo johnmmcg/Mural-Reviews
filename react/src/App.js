@@ -2,7 +2,9 @@ import React from 'react';
 import { Router, browserHistory, Route, IndexRoute } from 'react-router';
 import MuralIndexContainer from './containers/MuralIndexContainer';
 import NavBar from './components/NavBar';
-import MuralShowContainer from './containers/MuralShowContainer'
+import MuralShowContainer from './containers/MuralShowContainer';
+import ReviewContainer from './containers/ReviewContainer';
+
 
 
 const App = (props) => {
