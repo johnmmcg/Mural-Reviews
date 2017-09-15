@@ -116,6 +116,7 @@ $raleway: 'Raleway', sans-serif;
   }
 }
 
+
 .mainheader {
   width: 100%;
   margin: 0;
@@ -249,6 +250,27 @@ $raleway: 'Raleway', sans-serif;
   }
 }
 
+.add_mural {
+  background-color: white;
+  color: black;
+  margin: 20px;
+  // border: 2px solid $scheme-red;
+  // box-shadow: 0 0 16px;
+  font-family: $quicksand;
+}
+
+label {
+  font-size: 30px;
+  font-family: $quicksand;
+}
+
+.formbox {
+  border: 20px solid $scheme-red;
+  box-shadow: 0 0 16px;
+}
+.form_writing {
+  font: 54px;
+=======
 .MuralShowTile {
   margin: 0 auto;
 
