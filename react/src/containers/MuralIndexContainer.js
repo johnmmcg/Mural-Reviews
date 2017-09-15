@@ -9,10 +9,15 @@ class MuralIndexContainer extends Component {
       search: ''
     }
     this.updateSearch=this.updateSearch.bind(this)
+    this.handleSubmit=this.handleSubmit.bind(this)
   }
 
   updateSearch(event) {
     this.setState({search: event.target.value.substr(0, 20)});
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
   }
 
   componentDidMount() {
@@ -57,7 +62,7 @@ class MuralIndexContainer extends Component {
     return (
 
       <div>
-        <form className="search">
+        <form className="search" onSubmit={this.handleSubmit}>
           <input className="search"
             type="text"
             name="Search"
@@ -66,7 +71,7 @@ class MuralIndexContainer extends Component {
             value={this.state.search}
             onChange={this.updateSearch}
           />
-          </form>
+        </form>
         {muralsIndex}
       </div>
     )

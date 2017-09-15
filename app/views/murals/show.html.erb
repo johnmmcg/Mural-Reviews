@@ -1,5 +1,4 @@
 
-<h2> Reviews </h2>
 <% @reviews.each do |review| %>
 
   <% if current_user && current_user.admin? %>
@@ -12,8 +11,6 @@
 <div id="app">
 
 </div>
-
-<%= link_to "Add Review", new_mural_review_path(@mural)%>
 
 <% if current_user && current_user.admin? || current_user && current_user.id == @mural.user_id %>
 <%= button_to "Delete Mural: #{@mural.name}", mural_path(@mural), method: :delete %>

@@ -77,6 +77,7 @@ class MuralShowContainer extends Component {
       <div>
         {deleteMuralButton}
         {muralShow}
+        <hr />
         <ReviewContainer id={this.props.params.id} />
       </div>
     )
