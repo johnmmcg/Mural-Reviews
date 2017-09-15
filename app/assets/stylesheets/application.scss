@@ -12,6 +12,10 @@ $bungie: 'Bungee Shade', cursive;
 $monoton: 'Monoton', cursive;
 $raleway: 'Raleway', sans-serif;
 
+body {
+  background-color: $scheme-red;
+}
+
 .topnav {
   background-color: $scheme-dark-blue;
   position: fixed;
