@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import ReviewTile from '../components/ReviewTile'
+import { Link } from 'react-router'
+
 
 class ReviewContainer extends Component {
   constructor(props) {
@@ -62,8 +64,13 @@ class ReviewContainer extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      this.setState( {data: body} )
+      console.log(body)
     })
+
+  }
+
+  refreshPage() {
+    window.location.reload()
   }
 
 
@@ -97,6 +104,8 @@ class ReviewContainer extends Component {
       <div>
         <h2>Reviews: </h2>
         {reviewsIndex}
+
+        <Link to={`/murals/${this.props.id}/reviews/new`} onClick={this.refreshPage}>Add New Review</Link>
       </div>
     )
   }
