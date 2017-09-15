@@ -103,14 +103,24 @@ class ReviewTile extends Component {
     })
 
     return(
-      <div className="reviewTile">
-        <h3>{this.props.username}</h3>
-        <h4>Rating: {this.props.rating}</h4>
-        <p>{this.props.review}</p>
-        <h6>Upvotes: {upvote}</h6>
-        <h6>Downvotes: {downvote}</h6>
-        <h5 onClick={this.handleUpVoteClick}className={`fa fa-thumbs-up ${upVoteColor}`}  aria-hidden="true"></h5>
-        <h5 onClick={this.handleDownVoteClick}className={`fa fa-thumbs-down ${downVoteColor}`} aria-hidden="true"></h5>
+        <div className="row medium-unstack">
+          <div className="small-12 small-centered medium-10 medium-centered medium-expand columns">
+          <div className="reviewTile">
+            <div className="row medium-unstack">
+              <div className="small-12 medium-5 columns">
+                <h3>{this.props.username}: </h3>
+              </div>
+              <div className="small-12 medium-5 columns">
+                <h4>Rating: {this.props.rating}</h4>
+              </div>
+            </div>
+            <p>{this.props.review}</p>
+            <h6>Upvotes: {upvote}</h6>
+            <h6>Downvotes: {downvote}</h6>
+            <h5 onClick={this.handleUpVoteClick}className={`fa fa-thumbs-up ${upVoteColor}`}  aria-hidden="true"></h5>
+            <h5 onClick={this.handleDownVoteClick}className={`fa fa-thumbs-down ${downVoteColor}`} aria-hidden="true"></h5>
+          </div>
+        </div>
       </div>
     )
   }
