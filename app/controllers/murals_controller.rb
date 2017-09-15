@@ -4,6 +4,13 @@ class MuralsController < ApplicationController
 
   def new
     @mural = Mural.new
+    @rating_collection = [
+      [1, "1"],
+      [2, "2"],
+      [3, "3"],
+      [4, "4"],
+      [5, "5"]
+     ]
   end
 
   def create

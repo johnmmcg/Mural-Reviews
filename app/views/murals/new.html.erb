@@ -1,31 +1,39 @@
-<h1>Add a New Mural</h1>
 
+<div class="add_new">
+  <div class="row medium-unstack">
+    <div class="small-12 medium-10 columns menu">
+      <h1>Add a New Mural</h1>
 
-<%= form_for @mural do |f| %>
+      <%= form_for @mural do |f| %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br /><br />
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <br /><br />
 
-  <%= f.label :location %>
-  <%= f.text_field :location %>
-  <br /><br />
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+        <br /><br />
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <br /><br />
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+        <br /><br />
 
-  <%= f.label :rating %>
-  <%= f.text_field :rating %>
-  <br /><br />
+        <div class="button">
+        <%= f.label :rating %>
+        <%= f.collection_radio_buttons(:rating, @rating_collection, :first, :last) %>
+        </div>
+        <br /><br />
 
-  <%= f.label :photo_url %>
-  <%= f.text_field :photo_url %>
-  <br /><br />
+        <%= f.label :photo_url %>
+        <%= f.text_field :photo_url %>
+        <br /><br />
 
-  <%= f.label :mural_upload, "Upload Mural Picture" %>
-  <%= f.file_field :mural_upload %>
+        <%= f.label :mural_upload, "Upload Mural Picture" %>
+        <%= f.file_field :mural_upload %>
 
-  <%= f.submit "Add Mural" %>
+        <%= f.submit "Add Mural" %>
 
-<% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
