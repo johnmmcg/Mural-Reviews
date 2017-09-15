@@ -14,7 +14,7 @@ feature 'user adds mural;
   end
 
 
-  scenario 'user adds a mural with a photo url while signed in' do
+  xscenario 'user adds a mural with a photo url while signed in' do
     User.create(username: 'johnmcg', email: 'johnmcg@gmail.com', password: 'password')
     visit new_user_session_path
 
@@ -35,7 +35,7 @@ feature 'user adds mural;
     expect(page).to have_content("Mural added successfully")
   end
 
-  scenario 'user adds a mural with a photo attachment while signed in' do
+  xscenario 'user adds a mural with a photo attachment while signed in' do
     User.create(username: 'johnmcg', email: 'johnmcg@gmail.com', password: 'password')
     visit new_user_session_path
 
@@ -57,7 +57,7 @@ feature 'user adds mural;
   end
 
 
-  scenario 'user attempts to add a mural while signed in, but provides bad data' do
+  xscenario 'user attempts to add a mural while signed in, but provides bad data' do
     user = User.create(username: 'johnmcg', email: 'johnmcg@gmail.com', password: 'password')
     Mural.create(name: 'Big Fish', location: 'Martin Luther King Dr', user_id: user.id, description: "This is a description", rating: '4', photo_url: 'http://www.petsmart.com/learning-center/fish-care/the-right-food-to-feed-your-fish/A0009.html')
     visit new_user_session_path
@@ -78,7 +78,7 @@ feature 'user adds mural;
     expect(page).to have_content "Please specify a photo url or upload a mural picture, but not both."
   end
 
-  scenario 'user can delete the mural she posted' do
+  xscenario 'user can delete the mural she posted' do
     user = User.create(username: 'alex', email: 'alex@gmail.com', password: 'password')
     big_fish = Mural.create(name: 'Big Fish', location: 'Martin Luther King Dr', user_id: user.id, description: "This is a description", rating: '4', photo_url: 'http://www.petsmart.com/learning-center/fish-care/the-right-food-to-feed-your-fish/A0009.html')
     visit new_user_session_path
