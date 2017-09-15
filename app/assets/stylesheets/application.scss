@@ -147,7 +147,7 @@ $raleway: 'Raleway', sans-serif;
 
 .index {
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
   padding: 15px;
   padding-top: 25px;
   background-color: $scheme-red;
@@ -390,4 +390,29 @@ $raleway: 'Raleway', sans-serif;
 
 .reviews {
   background-color: $scheme-light-blue;
+}
+
+.add_new {
+  background-color: $scheme-red;
+  padding: 20px auto;
+
+  h1 {
+    color: $scheme-light-blue;
+    margin: 20px;
+    font-size: 50px;
+    font-family: $fugaz;
+  }
+
+  label {
+    color: $scheme-light-blue;
+    font-size: 30px;
+    font-family: $quicksand;
+  }
+  input {
+    font-size: 20px;
+    font-family: $quicksand;
+    background-color: $scheme-cream;
+    border: 3px solid $scheme-red;
+    box-shadow: 20 25 66px $scheme-dark-blue;
+  }
 }
