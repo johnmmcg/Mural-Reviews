@@ -175,15 +175,14 @@ $monoton: 'Monoton', cursive;
     }
 
     h3 {
-      margin-top: 10px;
+      margin: 0 auto;
       font-size: 18px;
       text-align: center;
-      position: absolute;
-      width: auto;
       font-family: $fugaz;
       color: $scheme-dark-blue;
+      border: 1px solid $scheme-red;
+      border-bottom-width: 2px;
       background-color: $scheme-cream;
-      border-radius: 10%;
       transition: all 0.2s ease 0s;
 
       &:hover {
