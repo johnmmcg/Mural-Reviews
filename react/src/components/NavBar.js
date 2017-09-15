@@ -4,7 +4,6 @@ import { Link } from 'react-router'
 const NavBar = props => {
   return(
     <div>
-
       {props.children}
     </div>
   )
