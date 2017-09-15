@@ -61,6 +61,7 @@ class MuralIndexContainer extends Component {
           <input className="search"
             type="text"
             name="Search"
+            id="Search"
             placeholder="Search"
             value={this.state.search}
             onChange={this.updateSearch}
