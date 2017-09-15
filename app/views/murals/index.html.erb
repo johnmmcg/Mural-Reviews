@@ -1,9 +1,15 @@
-<div class="index align center">
+<div class="index">
+  <div class="row medium-unstack">
+    <div class="small-12 medium-4 columns indexLink">
+      <%= link_to 'Add New Mural', new_mural_path %>
+    </div>
+    <div class="small-12 medium-4 columns indexLink">
+      <%= link_to 'All Murals', murals_path %>
+    </div>
+  </div>
   <div class="row medium-unstack">
       <div id="app">
 
       </div>
   </div>
 </div>
-
-<%= link_to 'Add New Mural', new_mural_path %>

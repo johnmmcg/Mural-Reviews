@@ -135,43 +135,61 @@ $monoton: 'Monoton', cursive;
 }
 
 .index {
+  text-align: center;
+  margin: 15px auto;
 
-  a.allMurals {
-    text-align: center;
-    font-family: $quicksand;
-    margin-top: 12px;
-    color: $scheme-cream;
-    background-color: $scheme-red;
-    border-style: solid;
-    border-width: thin;
-    border-color: $scheme-cream;
-
-    &:hover {
-      color: $scheme-red;
-      background-color: $scheme-cream;
+  .indexLink {
+    a {
+      text-align: center;
+      padding: 5px;
+      margin: 10px;
+      font-size: 30px;
+      font-family: $quicksand;
+      color: $scheme-cream;
+      background-color: $scheme-dark-blue;
       border-style: solid;
       border-width: thin;
       border-color: $scheme-red;
+      transition: all 0.2s ease 0s;
+
+      &:hover {
+        color: $scheme-dark-blue;
+        background-color: $scheme-cream;
+        border-style: solid;
+        border-width: thin;
+        border-color: $scheme-dark-blue;
+      }
     }
+
   }
 
   .muralIndexTile {
-    text-align: center;
-    margin: 0 auto;
+    margin: 20px;
+    border: 2px solid $scheme-red;
+    box-shadow: 0 0 16px 5px $scheme-dark-blue;
+
+    a {
+      text-align: center;
+      margin: 15px auto;
+      margin-bottom: 10px;
+    }
 
     h3 {
+      margin-top: 20px;
       font-size: 18px;
       text-align: center;
       padding: 10px 7px;
+      display: inline-block;
+      width: auto;
       font-family: $fugaz;
-      color: $scheme-cream;
-      margin: 50px 10px;
+      color: $scheme-dark-blue;
+      background-color: $scheme-cream;
       border-radius: 10%;
       transition: all 0.2s ease 0s;
 
       &:hover {
-        background-color: $scheme-cream;
-        color: $scheme-dark-blue
+        background-color: $scheme-dark-blue;
+        color: $scheme-cream;
       }
 
     }
@@ -180,6 +198,22 @@ $monoton: 'Monoton', cursive;
       display: block;
       margin: 0 auto;
       text-align: center;
+    }
+
+    &:hover {
+      position: relative;
+      top: -5px;
+      left: -5px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+
+    &:active{
+      position: relative;
+      top: 0px;
+      left: 0px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
     }
   }
 }
