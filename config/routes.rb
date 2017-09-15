@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :murals do
-        resources :votes
+        resources :reviews, :votes
       end
       # includes mural information with creator and reviews array
     end

@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import MuralShowTile from '../components/MuralShowTile'
 import ReviewContainer from './ReviewContainer'
-
+import { Route, Redirect, browserHistory } from 'react-router'
 
 class MuralShowContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mural: null
-    };
+      mural: ""
+    }
+    this.adminDeleteMural=this.adminDeleteMural.bind(this)
   }
 
   componentDidMount() {
@@ -30,7 +31,35 @@ class MuralShowContainer extends Component {
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
+  adminDeleteMural() {
+    fetch(`/api/v1/murals/${this.props.params.id}`, {
+      credentials: 'same-origin',
+      method: 'DELETE',
+    })
+    .then(response => response.json())
+    .then(body => {
+      console.log(body)
+    })
+    browserHistory.push('/')
+    window.location.reload()
+  }
+
+
   render() {
+    let deleteMuralButton
+
+    if (this.state.mural.current_user && this.state.mural.current_user.admin){
+      deleteMuralButton=
+        <button
+          className="btn btn-default"
+          // onClick={this.adminDeleteMural}>Delete This Mural
+
+          onClick={this.adminDeleteMural}>Delete This Mural
+
+
+        </button>
+    }
+
     let muralShow = ""
     if ( this.state.mural ) {
       muralShow =
@@ -46,6 +75,7 @@ class MuralShowContainer extends Component {
     }
     return (
       <div>
+        {deleteMuralButton}
         {muralShow}
         <ReviewContainer id={this.props.params.id} />
       </div>
