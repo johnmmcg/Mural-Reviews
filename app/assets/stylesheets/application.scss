@@ -133,3 +133,53 @@ $monoton: 'Monoton', cursive;
 .blue {
   color: $scheme-light-blue;
 }
+
+.index {
+
+  a.allMurals {
+    text-align: center;
+    font-family: $quicksand;
+    margin-top: 12px;
+    color: $scheme-cream;
+    background-color: $scheme-red;
+    border-style: solid;
+    border-width: thin;
+    border-color: $scheme-cream;
+
+    &:hover {
+      color: $scheme-red;
+      background-color: $scheme-cream;
+      border-style: solid;
+      border-width: thin;
+      border-color: $scheme-red;
+    }
+  }
+
+  .muralIndexTile {
+    text-align: center;
+    margin: 0 auto;
+
+    h3 {
+      font-size: 18px;
+      text-align: center;
+      padding: 10px 7px;
+      font-family: $fugaz;
+      color: $scheme-cream;
+      margin: 50px 10px;
+      border-radius: 10%;
+      transition: all 0.2s ease 0s;
+
+      &:hover {
+        background-color: $scheme-cream;
+        color: $scheme-dark-blue
+      }
+
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}

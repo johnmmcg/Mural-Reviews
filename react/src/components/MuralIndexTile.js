@@ -11,12 +11,13 @@ class MuralIndexTile extends Component {
 
   render() {
     return(
-      <div className="MuralIndexTile">
-        <Link to={`/murals/${this.props.id}`}>
-          <h3>{this.props.name}</h3>
-        </Link>
-
-        <img src={this.props.photo_url} />
+      <div className="muralIndexTile">
+        <div className="small-12 medium-8 large-4 columns">
+          <Link to={`/murals/${this.props.id}`}>
+            <h3>{this.props.name}</h3>
+            <img src={this.props.photo_url} />
+          </Link>
+        </div>
       </div>
     )
   }

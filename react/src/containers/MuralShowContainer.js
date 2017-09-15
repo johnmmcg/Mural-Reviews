@@ -8,7 +8,7 @@ class MuralShowContainer extends Component {
     super(props);
     this.state = {
       mural: null
-    }
+    };
   }
 
   componentDidMount() {

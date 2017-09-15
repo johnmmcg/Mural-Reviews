@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 const NavBar = props => {
   return(
     <div>
-      <Link to='/'>All Murals</Link>
+      <Link to='/' className="allMurals" >All Murals</Link>
       {props.children}
     </div>
   )
