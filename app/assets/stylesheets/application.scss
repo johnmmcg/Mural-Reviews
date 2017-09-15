@@ -396,6 +396,7 @@ $raleway: 'Raleway', sans-serif;
   background-color: $scheme-red;
   padding: 20px auto;
 
+
   h1 {
     color: $scheme-light-blue;
     margin: 20px;
@@ -414,5 +415,10 @@ $raleway: 'Raleway', sans-serif;
     background-color: $scheme-cream;
     border: 3px solid $scheme-red;
     box-shadow: 20 25 66px $scheme-dark-blue;
+  }
+
+  input[type=radio] {
+    width: 1em;
+    height: 1em;
   }
 }

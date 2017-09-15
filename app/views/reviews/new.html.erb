@@ -8,9 +8,10 @@
 
 <%= form_for [@mural, @review] do |f| %>
 
-  <%= f.label :rating %>
-  <%= f.text_field :rating %>
+  <%= f.label :rating, class: 'ratingbutton' %>
+  <%= f.collection_radio_buttons(:rating, @rating_collection, :first, :last) %>
   <br /><br />
+
 
   <%= f.label :review %>
   <%= f.text_field :review %>

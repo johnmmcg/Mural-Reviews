@@ -5,6 +5,13 @@ class ReviewsController < ApplicationController
   def new
     @mural = Mural.find(params[:mural_id])
     @review = Review.new
+    @rating_collection = [
+      [1, "1"],
+      [2, "2"],
+      [3, "3"],
+      [4, "4"],
+      [5, "5"]
+     ]
   end
 
   def create

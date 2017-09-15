@@ -18,8 +18,10 @@
         <%= f.text_field :description %>
         <br /><br />
 
+        <div class="button">
         <%= f.label :rating %>
-        <%= f.text_field :rating %>
+        <%= f.collection_radio_buttons(:rating, @rating_collection, :first, :last) %>
+        </div>
         <br /><br />
 
         <%= f.label :photo_url %>
