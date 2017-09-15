@@ -15,8 +15,8 @@ class MuralIndexTile extends Component {
         <div>
           <Link to={`/murals/${this.props.id}`}>
             <div className="muralIndexTile">
-              <h3>{this.props.name}</h3>
               <img src={this.props.photo_url} />
+              <h3>{this.props.name}</h3>
             </div>
           </Link>
         </div>

@@ -175,11 +175,10 @@ $monoton: 'Monoton', cursive;
     }
 
     h3 {
-      margin-top: 20px;
+      margin-top: 10px;
       font-size: 18px;
       text-align: center;
-      padding: 10px 7px;
-      display: inline-block;
+      position: absolute;
       width: auto;
       font-family: $fugaz;
       color: $scheme-dark-blue;
@@ -194,10 +193,10 @@ $monoton: 'Monoton', cursive;
 
     }
 
+
     img {
-      display: block;
-      margin: 0 auto;
-      text-align: center;
+      position: relative;
+      width: 100%;
     }
 
     &:hover {
